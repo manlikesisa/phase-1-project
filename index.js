@@ -14,6 +14,7 @@ const updateDetails = (url,title,author) =>{
     memeAuthor.innerHTML = 'Meme by: ${author}';
 }
 
+
 uploadImageInput.addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
