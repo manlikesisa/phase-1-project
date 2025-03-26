@@ -1,15 +1,67 @@
 /* Overall Meme Generator Container */
-*{
-    background-image:url(https://images.unsplash.com/photo-1513628253939-010e64ac66cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RhcnN8ZW58MHx8MHx8fDA%3D)
+* {
+    background: url(https://images.unsplash.com/photo-1742615869855-ad5270a1b2ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3MHx8fGVufDB8fHx8fA%3D%3D);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid pink;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover and Touch Effects for Links */
+.sidebar ul a:hover, .sidebar ul a:active {
+    padding: 8px 36px;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
+    letter-spacing: 3px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Meme Generator */
 .meme-generator {
     font-family: "Roboto", sans-serif;
     text-align: center;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center;
 }
 
 /* Meme Image Styling */
@@ -44,24 +96,88 @@
 .input-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align inputs to the right */
-    margin-left: auto; /* Push the input container to the right */
-    max-width: 400px;  /* Set a max width for the form */
+    align-items: flex-end;
+    margin-left: auto;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out; /* Add transition */
 }
 
-
-
+/* Input Fields Styling */
 .input-container input[type="file"],
 .input-container input[type="text"] {
     padding: 10px;
     font-size: 16px;
     margin-top: 10px;
-    width:50%;
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out; /* Add transition for focus/hover */
 }
 
+/* Hover and Focus Effects for Inputs */
+.input-container input[type="file"]:hover,
+.input-container input[type="text"]:hover,
+.input-container input[type="file"]:focus,
+.input-container input[type="text"]:focus {
+    border: 1px solid black; /* Add border color on hover/focus */
+    outline: none; /* Remove default outline */
+    padding: 10px 15px; /* Slightly increase padding */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover/focus */
+}
 
-
+/* Meme Author Styling */
 .meme-generator .meme-author {
     margin: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sidebar ul a {
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .meme-generator {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .input-container {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .input-container input[type="file"],
+    .input-container input[type="text"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar ul a {
+        font-size: 16px;
+    }
+
+    .meme-generator .generate-meme-btn {
+        font-size: 16px;
+        padding: 6px 16px;
+    }
 }
