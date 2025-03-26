@@ -1,0 +1,1 @@
+In this website a user can generate a meme and also add a meme as long as the user writes meme's title and the author of the meme.Failure to do that the following alert message will be displayed "Please upload an image and provide a title and author".
