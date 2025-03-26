@@ -1,36 +1,62 @@
-
-
-.meme-generator{
+/* Overall Meme Generator Container */
+.meme-generator {
     font-family: "Roboto", sans-serif;
     text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
 
-.meme-generator img{
+/* Meme Image Styling */
+.meme-generator img {
     height: 430px;
     object-fit: cover;
+    margin-top: 20px;
 }
 
-.meme-generator .generate-meme-button{
+/* Button Styling */
+.meme-generator .generate-meme-btn {
     padding: 8px 20px;
     border: none;
     border-left: 4px solid darkgray;
-    border-right:4px solid darkgray;
+    border-right: 4px solid darkgray;
     margin: 24px 0;
-    font: size 20px;
+    font-size: 20px;
     color: red;
-    background:white; 
+    background: white;
     cursor: pointer;
     transition: all 400ms ease;
 }
 
-.meme-generator .generate-meme-button :hover{
-    padding:8px 36px;
-    border-left:8px solid black;
-    border-right:8px solid black;
+.meme-generator .generate-meme-btn:hover {
+    padding: 8px 36px;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
     letter-spacing: 3px;
 }
 
+/* Container for Input Fields (Align Right) */
+.meme-generator .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align inputs to the right */
+    width: 100%; /* Make container take full width of its parent */
+    max-width: 400px; /* Limit width of container */
+    margin-right: 20px; /* Add margin to the right */
+    box-sizing: border-box;
+}
 
-.meme-generator .meme-author{
-    margin:8px;
+/* Style for Input Fields */
+.meme-generator input[type="file"], .meme-generator input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%; /* Inputs take the full width of their container */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Styling for Meme Author */
+.meme-generator .meme-author {
+    margin: 8px;
 }
