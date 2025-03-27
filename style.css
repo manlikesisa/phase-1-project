@@ -1,4 +1,4 @@
-/* Overall Meme Generator Container */
+
 * {
     background: url(https://images.unsplash.com/photo-1742615869855-ad5270a1b2ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3MHx8fGVufDB8fHx8fA%3D%3D);
     margin: 0;
@@ -45,7 +45,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Hover and Touch Effects for Links */
+
 .sidebar ul a:hover, .sidebar ul a:active {
     padding: 8px 36px;
     border-left: 8px solid black;
@@ -54,7 +54,7 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Meme Generator */
+
 .meme-generator {
     font-family: "Roboto", sans-serif;
     text-align: center;
@@ -64,14 +64,13 @@
     align-items: center;
 }
 
-/* Meme Image Styling */
+
 .meme-generator img {
     height: 430px;
     object-fit: cover;
     margin-top: 20px;
 }
 
-/* Button Styling */
 .meme-generator .generate-meme-btn {
     padding: 8px 20px;
     border: none;
@@ -92,17 +91,17 @@
     letter-spacing: 3px;
 }
 
-/* Container for Input Fields (Align Right) */
+
 .input-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-left: auto;
     max-width: 400px;
-    transition: all 0.3s ease-in-out; /* Add transition */
+    transition: all 0.3s ease-in-out; 
 }
 
-/* Input Fields Styling */
+
 .input-container input[type="file"],
 .input-container input[type="text"] {
     padding: 10px;
@@ -112,26 +111,26 @@
     box-sizing: border-box;
     border: 1px solid transparent;
     border-radius: 4px;
-    transition: all 0.3s ease-in-out; /* Add transition for focus/hover */
+    transition: all 0.3s ease-in-out; 
 }
 
-/* Hover and Focus Effects for Inputs */
+
 .input-container input[type="file"]:hover,
 .input-container input[type="text"]:hover,
 .input-container input[type="file"]:focus,
 .input-container input[type="text"]:focus {
-    border: 1px solid black; /* Add border color on hover/focus */
-    outline: none; /* Remove default outline */
-    padding: 10px 15px; /* Slightly increase padding */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover/focus */
+    border: 1px solid black; 
+    outline: none; 
+    padding: 10px 15px; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Meme Author Styling */
+
 .meme-generator .meme-author {
     margin: 8px;
 }
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;

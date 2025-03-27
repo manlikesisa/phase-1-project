@@ -35,7 +35,7 @@ generateMemeBtn.addEventListener("click", () => {
     const author = memeAuthorInput.value;
     
     if (imageUrl && imageUrl !== "" && title && author) {
-        updateDetails(imageUrl, title, author); // Display the meme with the title and author
+        updateDetails(imageUrl, title, author); 
     } else {
         alert("Please upload an image and provide a title and author.");
     }
