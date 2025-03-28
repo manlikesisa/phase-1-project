@@ -6,19 +6,13 @@ const uploadImageInput = document.querySelector("#uploadImage");
 const memeTitleInput = document.querySelector("#memeTitle"); 
 const memeAuthorInput = document.querySelector("#memeAuthor");
 
-// Select the elements for the About functionality
-const aboutBtn = document.querySelector("#about");
-const aboutContent = document.querySelector(".about-content");
-const closeAboutBtn = document.querySelector(".close-about-btn");
-
-// Function to update the meme details
 const updateDetails = (url, title, author) => {
     memeImage.setAttribute("src", url);
     memeTitle.innerHTML = title;
     memeAuthor.innerHTML = `Meme by: ${author}`;
 };
 
-// Event listener for the "Upload Image" input
+
 uploadImageInput.addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -33,7 +27,7 @@ uploadImageInput.addEventListener("change", (event) => {
     }
 });
 
-// Event listener for the "Generate Meme" button
+
 generateMemeBtn.addEventListener("click", () => {
     const imageUrl = memeImage.src;
     const title = memeTitleInput.value;
@@ -46,7 +40,7 @@ generateMemeBtn.addEventListener("click", () => {
     }
 });
 
-// Function to fetch a random wholesome meme from the API
+
 const generateMeme = () => {
     fetch("https://meme-api.com/gimme/wholesomememes")
         .then((response) => response.json())
@@ -58,18 +52,17 @@ const generateMeme = () => {
         });
 };
 
-// Event listener for the "Generate Meme" button to fetch meme from the API
+
 generateMemeBtn.addEventListener("click", generateMeme);
 
-// Generate an initial meme when the page loads
+
 generateMeme();
 
-// Event listener for the "About" button to show the About section
 aboutBtn.addEventListener("click", () => {
-    aboutContent.classList.toggle("active"); // Toggle the visibility of the About section
+    aboutContent.classList.toggle("active"); 
 });
 
-// Event listener for the "Close" button inside the About section to hide it
+
 closeAboutBtn.addEventListener("click", () => {
-    aboutContent.classList.remove("active"); // Remove the active class to hide the About section
+    aboutContent.classList.remove("active"); 
 });
