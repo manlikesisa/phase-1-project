@@ -14,6 +14,11 @@ aboutLink.addEventListener("click", (event) => {
     aboutContent.classList.toggle("active"); 
 });
 
+contactLink.addEventListener("click",(event) => {
+        event.preventDefault();
+        contactContent.classList.toggle("active");
+});
+
 
 
 const updateDetails = (url, title, author) => {
