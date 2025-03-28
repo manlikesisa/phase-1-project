@@ -6,6 +6,16 @@ const uploadImageInput = document.querySelector("#uploadImage");
 const memeTitleInput = document.querySelector("#memeTitle"); 
 const memeAuthorInput = document.querySelector("#memeAuthor");
 
+const aboutLink = document.querySelector("#aboutLink");
+const aboutContent = document.querySelector("#aboutContent");
+
+aboutLink.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    aboutContent.classList.toggle("active"); 
+});
+
+
+
 const updateDetails = (url, title, author) => {
     memeImage.setAttribute("src", url);
     memeTitle.innerHTML = title;
